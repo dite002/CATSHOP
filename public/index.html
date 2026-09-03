@@ -3,65 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CATSHOP - cari item Perfect World dengan cepat.">
-  <title>CATSHOP — Marketplace Perfect World</title>
+  <meta name="description" content="CATSHOP - cari item dan catshop Perfect World dengan cepat.">
+  <meta name="theme-color" content="#111822">
+  <title>CATSHOP — Pasar Perfect World</title>
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+  <div class="sky-glow" aria-hidden="true"></div>
   <header class="topbar">
-    <a class="brand" href="/">CAT<span>SHOP</span></a>
-    <nav>
-      <a href="#market">Market</a>
+    <a class="brand" href="/" aria-label="CATSHOP beranda">
+      <span class="brand-mark">C</span>
+      <span><strong>CAT</strong>SHOP<small>PERFECT WORLD MARKET</small></span>
+    </a>
+    <nav aria-label="Navigasi utama">
+      <a class="active" href="#market">Pasar</a>
       <a href="#servers">Server</a>
-      <a href="#help">Bantuan</a>
+      <a href="#help">Panduan</a>
     </nav>
-    <button class="login-btn">Masuk</button>
+    <button class="login-btn" type="button"><span>Masuk</span></button>
   </header>
 
   <main>
     <section class="hero">
+      <div class="mountains" aria-hidden="true"><i></i><i></i><i></i></div>
       <div class="hero-copy">
-        <div class="eyebrow"><span class="pulse"></span> MARKETPLACE PLAYER</div>
-        <h1>Temukan item.<br><em>Tanpa keliling kota.</em></h1>
-        <p>Cari harga dan catshop Perfect World dari satu tempat. Lebih cepat menemukan item, lebih mudah menentukan harga.</p>
-        <div class="search-box">
-          <span class="search-icon">⌕</span>
-          <input id="search" type="search" placeholder="Cari nama item, ID, atau seller..." autocomplete="off">
-          <button id="searchBtn">Cari</button>
-        </div>
-        <div class="popular">
-          <span>Populer:</span>
-          <button>Gold Coin</button><button>Chrono Stone</button><button>Perfect Token</button>
+        <div class="eyebrow"><span class="pulse"></span> PASAR SEDANG AKTIF</div>
+        <h1>Temukan harta<br><em>yang kamu cari.</em></h1>
+        <p>Telusuri item dan harga dari catshop player tanpa membuang waktu berkeliling kota.</p>
+        <div class="search-shell">
+          <label class="search-box" for="search">
+            <span class="search-icon" aria-hidden="true"></span>
+            <input id="search" type="search" placeholder="Ketik nama item atau seller..." autocomplete="off">
+            <button id="searchBtn" type="button">Cari Item</button>
+          </label>
+          <div class="popular">
+            <span>Pencarian populer</span>
+            <button type="button">Gold Coin</button><button type="button">Chrono Stone</button><button type="button">Perfect Token</button>
+          </div>
         </div>
       </div>
-      <div class="hero-card">
-        <div class="card-head"><span>LIVE MARKET</span><span class="live">● LIVE</span></div>
-        <div class="price-row"><div><strong>Chrono Stone</strong><small>Server Aurora · 12 catshop</small></div><b>1.25M</b></div>
-        <div class="price-row"><div><strong>Perfect Token</strong><small>Server Aurora · 8 catshop</small></div><b>850K</b></div>
-        <div class="price-row"><div><strong>Gold Coin</strong><small>Server Aurora · 24 catshop</small></div><b>98K</b></div>
-        <div class="card-foot">Harga diperbarui otomatis</div>
-      </div>
+
+      <aside class="market-panel" aria-label="Ringkasan pasar langsung">
+        <div class="panel-corners" aria-hidden="true"></div>
+        <div class="card-head"><span>CATATAN PEDAGANG</span><span class="live"><i></i> LIVE</span></div>
+        <div class="market-title"><div><small>HARGA TERENDAH SAAT INI</small><h2>Pasar Aurora</h2></div><span class="seal">市</span></div>
+        <div class="price-list">
+          <a class="price-row" href="#market"><span class="item-gem amber">◆</span><span><strong>Chrono Stone</strong><small>12 catshop</small></span><b>1.25M</b></a>
+          <a class="price-row" href="#market"><span class="item-gem violet">✦</span><span><strong>Perfect Token</strong><small>8 catshop</small></span><b>850K</b></a>
+          <a class="price-row" href="#market"><span class="item-gem cyan">◈</span><span><strong>Gold Coin</strong><small>24 catshop</small></span><b>98K</b></a>
+        </div>
+        <div class="card-foot"><span>Pembaruan otomatis</span><time>baru saja</time></div>
+      </aside>
     </section>
 
-    <section id="market" class="section">
-      <div class="section-title"><div><span class="eyebrow">MARKET</span><h2>Item yang sedang dicari</h2></div><a href="#">Lihat semua →</a></div>
+    <section id="market" class="section market-section">
+      <div class="section-title"><div><span class="eyebrow">PILIHAN PETUALANG</span><h2>Item yang banyak dicari</h2></div><a href="#market">Jelajahi pasar <span>→</span></a></div>
       <div class="item-grid">
-        <article class="item"><div class="item-icon">◆</div><div><h3>Chrono Stone</h3><p>Mulai <b>1.25M</b> · 12 listing</p></div><span class="arrow">→</span></article>
-        <article class="item"><div class="item-icon">✦</div><div><h3>Perfect Token</h3><p>Mulai <b>850K</b> · 8 listing</p></div><span class="arrow">→</span></article>
-        <article class="item"><div class="item-icon">◈</div><div><h3>Gold Coin</h3><p>Mulai <b>98K</b> · 24 listing</p></div><span class="arrow">→</span></article>
-        <article class="item"><div class="item-icon">✧</div><div><h3>Dragon Jade</h3><p>Mulai <b>4.8M</b> · 5 listing</p></div><span class="arrow">→</span></article>
+        <article class="item"><div class="item-icon amber">◆</div><div><h3>Chrono Stone</h3><p>Mulai <b>1.25M</b></p><small>12 listing aktif</small></div><span class="arrow">›</span></article>
+        <article class="item"><div class="item-icon violet">✦</div><div><h3>Perfect Token</h3><p>Mulai <b>850K</b></p><small>8 listing aktif</small></div><span class="arrow">›</span></article>
+        <article class="item"><div class="item-icon cyan">◈</div><div><h3>Gold Coin</h3><p>Mulai <b>98K</b></p><small>24 listing aktif</small></div><span class="arrow">›</span></article>
+        <article class="item"><div class="item-icon jade">✧</div><div><h3>Dragon Jade</h3><p>Mulai <b>4.8M</b></p><small>5 listing aktif</small></div><span class="arrow">›</span></article>
       </div>
     </section>
 
     <section id="servers" class="servers">
-      <div><span class="eyebrow">SERVER</span><h2>Pasar sesuai server kamu.</h2><p>Setiap listing terhubung dengan server dan catshop yang sebenarnya.</p></div>
-      <div class="server-list"><div><span class="status"></span><strong>Aurora</strong><small>1,284 item aktif</small></div><div><span class="status"></span><strong>Celestial</strong><small>842 item aktif</small></div><div><span class="status"></span><strong>Genesis</strong><small>517 item aktif</small></div></div>
+      <div class="server-copy"><span class="eyebrow">GERBANG DUNIA</span><h2>Pilih dunia tempatmu berdagang.</h2><p>Setiap harga berasal dari catshop yang benar-benar aktif pada server tersebut.</p></div>
+      <div class="server-list">
+        <div><span class="status"></span><span><strong>Aurora</strong><small>ONLINE</small></span><b>1.284 item</b><i>›</i></div>
+        <div><span class="status"></span><span><strong>Celestial</strong><small>ONLINE</small></span><b>842 item</b><i>›</i></div>
+        <div><span class="status"></span><span><strong>Genesis</strong><small>ONLINE</small></span><b>517 item</b><i>›</i></div>
+      </div>
     </section>
 
-    <section id="help" class="steps"><div><span class="number">01</span><h3>Cari item</h3><p>Gunakan pencarian untuk menemukan item yang kamu butuhkan.</p></div><div><span class="number">02</span><h3>Pilih catshop</h3><p>Bandingkan harga, jumlah, server, dan lokasi toko.</p></div><div><span class="number">03</span><h3>Datang & beli</h3><p>Ikuti informasi toko dan lakukan transaksi langsung di game.</p></div></section>
+    <section id="help" class="steps">
+      <div class="step-heading"><span class="eyebrow">CARA BERDAGANG</span><h2>Dari pencarian ke catshop.</h2></div>
+      <div class="step"><span class="number">01</span><h3>Cari item</h3><p>Ketik nama item yang kamu perlukan.</p></div>
+      <div class="step"><span class="number">02</span><h3>Bandingkan</h3><p>Pilih harga, jumlah, dan lokasi terbaik.</p></div>
+      <div class="step"><span class="number">03</span><h3>Temui seller</h3><p>Datangi catshop dan beli langsung di game.</p></div>
+    </section>
   </main>
 
-  <footer><div class="brand">CAT<span>SHOP</span></div><p>Player marketplace untuk Perfect World.</p><span>© 2026 CATSHOP</span></footer>
+  <footer><div class="brand"><span class="brand-mark">C</span><span><strong>CAT</strong>SHOP</span></div><p>Pasar item lintas dunia untuk komunitas Perfect World.</p><span>© 2026 CATSHOP</span></footer>
   <script src="/app.js"></script>
 </body>
 </html>
