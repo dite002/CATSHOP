@@ -31,7 +31,8 @@ app.get('/api/health', async (_req, res) => {
   }
 });
 
-app.get('*', (_req, res) => {
+// Express 5: use a RegExp catch-all instead of the old '*' path syntax.
+app.get(/.*/, (_req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
